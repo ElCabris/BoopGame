@@ -29,8 +29,8 @@ template <typename T> Node<T> *find_right_node(const Node<T> *);
 
 template <typename T> Node<T> *find_down_node(const Node<T> *);
 
-template <typename T> Node<T> *find_up_node(const Node<T> *node) {
-  auto actual = node;
+template <typename T> Node<T> *find_up_node(Node<T> *node) {
+  Node<T>* actual = node;
   while (actual->up != nullptr)
     actual = actual->up;
   return actual;
@@ -43,15 +43,15 @@ template <typename T> Node<T> *find_down_node(const Node<T> *node) {
   return actual;
 }
 
-template <typename T> Node<T> *find_left_node(const Node<T> *node) {
-  auto actual = node;
+template <typename T> Node<T> *find_left_node(Node<T> *node) {
+  Node<T>* actual = node;
   while (actual->left != nullptr)
     actual = actual->left;
   return actual;
 }
 
-template <typename T> Node<T> *find_right_node(const Node<T> *node) {
-  auto actual = node;
+template <typename T> Node<T> *find_right_node(Node<T> *node) {
+  Node<T>* actual = node;
   while (actual->right != nullptr)
     actual = actual->right;
   return actual;
